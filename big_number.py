@@ -33,11 +33,11 @@ def big_number_plus(str1, str2):
         num = int(lst1[i]) + int(lst2[i]) + is_one
         if num > 999:
             lst.insert(0, str(num % 1000))
-            is_one = num // 1000
+            is_one = 1
         else:
             lst.insert(0, str(num))
+            is_one = 0
     return lst
-
 
 print(big_number_plus("1234560", "66694300"))
 print(1234560 + 66694300)
