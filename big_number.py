@@ -37,7 +37,13 @@ def big_number_plus(str1, str2):
         else:
             lst.insert(0, str(num))
             is_one = 0
+    for i in range(len(lst)):
+        if len(lst[i]) == 2:
+            lst[i] = "0" + lst[i]
+        elif len(lst[i]) == 1:
+            lst[i] = "00" + lst[i]
     return lst
+
 
 print(big_number_plus("1234560", "66694300"))
 print(1234560 + 66694300)
