@@ -4,8 +4,6 @@ def div_by_three(str):
         str = "00" + str
     elif len_str % 3 == 2:
         str = "0" + str
-    else:
-        return str
     return str
 
 
@@ -39,12 +37,6 @@ def big_number_plus(str1, str2):
         else:
             lst.insert(0, (int(lst1[i]) + int(lst2[i]) + is_one))
     return lst
-
-
-
-
-
-
 
 
 print(big_number_plus("123456", "666943"))
