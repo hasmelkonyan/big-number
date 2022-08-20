@@ -30,14 +30,14 @@ def big_number_plus(str1, str2):
             lst1.insert(0, "000")
 
     for i in range(len(lst1) - 1, -1, -1):
-        print(lst1[i], lst2[i])
-        if int(lst1[i]) + int(lst2[i]) + is_one > 999:
-            lst.insert(0, (int(lst1[i]) + int(lst2[i]) + is_one) % 1000)
-            is_one = (int(lst1[i]) + int(lst2[i]) + is_one) // 1000
+        num = int(lst1[i]) + int(lst2[i]) + is_one
+        if num > 999:
+            lst.insert(0, str(num % 1000))
+            is_one = num // 1000
         else:
-            lst.insert(0, (int(lst1[i]) + int(lst2[i]) + is_one))
+            lst.insert(0, str(num))
     return lst
 
 
-print(big_number_plus("123456", "666943"))
-
+print(big_number_plus("1234560", "66694300"))
+print(1234560 + 66694300)
